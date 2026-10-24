@@ -1,0 +1,145 @@
+/**
+ * Bhavishya Darshan — Design Tokens
+ * Direction: Sacred Vedic Manuscript & Royal Heritage.
+ * Palette: Sandalwood Cream, Deep Maroon, Indigo, Saffron, Muted Brass, Charcoal Brown.
+ * Applied with ui-ux-pro-max and impeccable design guidelines.
+ */
+
+:root {
+  /* ==========================================================================
+     User-Specified Core Palette
+     ========================================================================== */
+  --saffron: #E89B25;            /* Buttons, active badges, and highlights */
+  --saffron-hover: #D48815;
+  --saffron-active: #BF770B;
+  --saffron-glow: rgba(232, 155, 37, 0.38);
+
+  --deep-maroon: #702D3C;        /* Headings and key accents */
+  --deep-maroon-hover: #58212D;
+  --deep-maroon-light: rgba(112, 45, 60, 0.08);
+  --deep-maroon-glow: rgba(112, 45, 60, 0.25);
+
+  --indigo: #303B72;             /* Navigation and links */
+  --indigo-hover: #212954;
+  --indigo-light: #445194;
+  --indigo-glow: rgba(48, 59, 114, 0.22);
+
+  --sandalwood: #F5EBDD;         /* Main background */
+  --sandalwood-card: #FAF4EB;    /* Elevated card and section surface */
+  --sandalwood-surface: #FFFDF9; /* Pure clean card highlight surface */
+  --sandalwood-dark: #EADDCB;    /* Deeper container/input background */
+  --sandalwood-border: #DECBB3;  /* Subdued section dividers */
+
+  --muted-brass: #B28A45;        /* Borders and decorative details */
+  --muted-brass-glow: #CCA258;
+  --muted-brass-light: rgba(178, 138, 69, 0.28);
+  --muted-brass-dark: #8F6B2C;
+
+  --charcoal-brown: #352C28;     /* Body text */
+  --charcoal-muted: #61534D;     /* Secondary subtitles, descriptions, and meta */
+  --charcoal-dim: rgba(53, 44, 40, 0.55); /* Subtle timestamps and disclaimers */
+
+  /* Legacy & Semantic Mapping */
+  --maroon-950: var(--sandalwood);
+  --maroon-900: var(--sandalwood-card);
+  --maroon-850: var(--sandalwood-dark);
+  --maroon-800: var(--sandalwood-surface);
+  --maroon-700: var(--muted-brass-light);
+  --maroon-600: var(--deep-maroon);
+
+  --gold: var(--muted-brass);
+  --gold-glow: var(--saffron);
+  --gold-light: #FBF0CC;
+  --gold-dark: var(--muted-brass-dark);
+
+  --ink: var(--charcoal-brown);
+  --ink-muted: var(--charcoal-muted);
+  --alabaster: var(--charcoal-brown);
+  --alabaster-muted: var(--charcoal-muted);
+  --alabaster-dim: var(--charcoal-dim);
+
+  --whatsapp: #25D366;           /* Official WhatsApp green */
+  --whatsapp-hover: #20BD5A;
+
+  /* Typography Stacks (Devanagari First) */
+  --font-serif: 'Tiro Devanagari Hindi', 'Noto Serif Devanagari', 'Martel', serif;
+  --font-sans: 'Hind', 'Noto Sans Devanagari', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-brand: 'Cinzel', serif;
+
+  /* Fluid Typography Scale */
+  --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+  --text-sm: clamp(0.875rem, 0.82rem + 0.28vw, 1rem);
+  --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+  --text-lg: clamp(1.125rem, 1.05rem + 0.38vw, 1.3rem);
+  --text-xl: clamp(1.3rem, 1.2rem + 0.5vw, 1.6rem);
+  --text-2xl: clamp(1.6rem, 1.4rem + 1vw, 2.2rem);
+  --text-3xl: clamp(2.1rem, 1.8rem + 1.5vw, 3rem);
+  --text-4xl: clamp(2.6rem, 2.2rem + 2.2vw, 4.2rem);
+  --text-hero: clamp(2.8rem, 2rem + 3.8vw, 5.8rem);
+
+  /* Spacing Scale */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
+
+  /* Layout */
+  --container-max: 1200px;
+  --container-padding: clamp(1.25rem, 4vw, 3rem);
+
+  /* Line Heights */
+  --lh-tight: 1.25;
+  --lh-snug: 1.4;
+  --lh-normal: 1.6;
+  --lh-body: 1.75;
+
+  /* Borders & Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+  --border-brass-hairline: 1px solid rgba(178, 138, 69, 0.32);
+  --border-brass-solid: 1.5px solid var(--muted-brass);
+  --border-brass-glow: 1px solid var(--muted-brass-glow);
+
+  /* Warm Organic Shadows */
+  --shadow-sm: 0 2px 10px rgba(53, 44, 40, 0.05);
+  --shadow-md: 0 8px 24px rgba(53, 44, 40, 0.08);
+  --shadow-lg: 0 16px 40px rgba(53, 44, 40, 0.12);
+  --shadow-saffron-glow: 0 6px 22px rgba(232, 155, 37, 0.38);
+  --shadow-brass-glow: 0 0 22px rgba(178, 138, 69, 0.3);
+
+  /* Transitions */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-circ: cubic-bezier(0, 0.55, 0.45, 1);
+  --duration-fast: 180ms;
+  --duration-normal: 320ms;
+  --duration-slow: 600ms;
+
+  /* Z-indices */
+  --z-negative: -1;
+  --z-base: 1;
+  --z-card: 5;
+  --z-header: 40;
+  --z-mobile-drawer: 50;
+  --z-floating-wa: 60;
+  --z-toast: 70;
+  --z-cursor: 90;
+  --z-preloader: 100;
+
+  /* Safe Area Insets (Apple iOS Notches, Dynamic Island & Android Gesture Bars) */
+  --sat: env(safe-area-inset-top, 0px);
+  --sar: env(safe-area-inset-right, 0px);
+  --sab: env(safe-area-inset-bottom, 0px);
+  --sal: env(safe-area-inset-left, 0px);
+
+  /* Touch Target Standards (Apple HIG & Android Material Guidelines: min 44-48px) */
+  --touch-target-min: 44px;
+}

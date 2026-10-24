@@ -1,0 +1,392 @@
+/**
+ * Bhavishya Darshan — Base Styles, Reset & Utility Classes
+ * Applied with ui-ux-pro-max and impeccable design standards.
+ * Palette: Sandalwood Cream, Deep Maroon, Indigo, Saffron, Muted Brass, Charcoal Brown.
+ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: auto; /* Managed smoothly by Lenis */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--sandalwood);
+  color: var(--charcoal-brown);
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: var(--lh-body);
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+  min-height: 100dvh; /* Dynamic viewport for iOS Safari and Android Chrome */
+  padding-left: var(--sal);
+  padding-right: var(--sar);
+}
+
+/* Accessibility: Skip Link */
+.skip-link {
+  position: absolute;
+  top: -60px;
+  left: 20px;
+  background: var(--deep-maroon);
+  color: var(--sandalwood);
+  padding: var(--space-3) var(--space-6);
+  font-weight: 700;
+  border-radius: var(--radius-sm);
+  z-index: var(--z-preloader);
+  text-decoration: none;
+  transition: top var(--duration-fast) ease;
+}
+.skip-link:focus {
+  top: 20px;
+  outline: 3px solid var(--saffron);
+}
+
+/* Scroll Progress Bar at the top of the viewport */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--deep-maroon) 0%, var(--saffron) 50%, var(--indigo) 100%);
+  z-index: var(--z-header);
+  box-shadow: 0 0 10px rgba(232, 155, 37, 0.7);
+  pointer-events: none;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+}
+
+/* Typography Defaults */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  line-height: var(--lh-snug);
+  letter-spacing: 0; /* Never negative for Devanagari */
+  color: var(--deep-maroon);
+}
+
+p {
+  margin-bottom: var(--space-4);
+  color: var(--charcoal-muted);
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+a {
+  color: var(--indigo);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color var(--duration-fast) ease, opacity var(--duration-fast) ease;
+}
+
+a:hover {
+  color: var(--deep-maroon);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  padding: 0.85rem 1.75rem;
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  font-weight: 600;
+  line-height: 1.2;
+  border-radius: var(--radius-full);
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: transform var(--duration-normal) var(--ease-out-expo),
+              box-shadow var(--duration-normal) var(--ease-out-expo),
+              background var(--duration-fast) ease,
+              border-color var(--duration-fast) ease;
+  min-height: 48px;
+  min-width: 48px;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--saffron) 0%, #D48815 100%);
+  color: #FFFFFF;
+  font-weight: 700;
+  text-shadow: 0 1px 2px rgba(53, 44, 40, 0.4);
+  box-shadow: 0 4px 18px var(--saffron-glow);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #F0A735 0%, var(--saffron) 100%);
+  box-shadow: 0 6px 24px rgba(232, 155, 37, 0.55);
+  color: #FFFFFF;
+}
+
+.btn-ghost {
+  background: rgba(178, 138, 69, 0.08);
+  color: var(--indigo);
+  border: 1.5px solid var(--muted-brass);
+}
+
+.btn-ghost:hover {
+  background: rgba(48, 59, 114, 0.08);
+  color: var(--deep-maroon);
+  border-color: var(--deep-maroon);
+  box-shadow: 0 0 16px rgba(178, 138, 69, 0.25);
+}
+
+.btn-whatsapp {
+  background: var(--whatsapp);
+  color: #FFFFFF;
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.35);
+}
+
+.btn-whatsapp:hover {
+  background: var(--whatsapp-hover);
+  box-shadow: 0 6px 22px rgba(37, 211, 102, 0.5);
+  color: #FFFFFF;
+}
+
+/* Subtle Shimmer Effect on Primary Buttons */
+.btn-shimmer::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 40%;
+  height: 200%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.35) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(25deg);
+  pointer-events: none;
+  transition: transform 0.75s ease;
+}
+.btn-shimmer:hover::after {
+  transform: rotate(25deg) translateX(380%);
+}
+
+/* Vedic Card with Brass Corner Brackets */
+.bracket-card {
+  position: relative;
+  background: var(--sandalwood-card);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(178, 138, 69, 0.35);
+  border-radius: var(--radius-md);
+  padding: var(--space-8);
+  box-shadow: var(--shadow-sm);
+  transition: border-color var(--duration-normal) ease, transform var(--duration-normal) var(--ease-out-expo), box-shadow var(--duration-normal) ease;
+}
+
+.bracket-card:hover {
+  border-color: var(--muted-brass);
+  box-shadow: var(--shadow-md);
+}
+
+/* Corner Bracket Accents */
+.bracket-card::before,
+.bracket-card::after {
+  content: '';
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-color: var(--muted-brass);
+  pointer-events: none;
+  transition: border-color var(--duration-fast) ease;
+}
+
+.bracket-card::before {
+  top: -1px;
+  left: -1px;
+  border-top: 2px solid var(--muted-brass);
+  border-left: 2px solid var(--muted-brass);
+  border-top-left-radius: var(--radius-sm);
+}
+
+.bracket-card::after {
+  bottom: -1px;
+  right: -1px;
+  border-bottom: 2px solid var(--muted-brass);
+  border-right: 2px solid var(--muted-brass);
+  border-bottom-right-radius: var(--radius-sm);
+}
+
+/* Secondary corner brackets via inner container */
+.bracket-corners-all {
+  position: relative;
+}
+.bracket-corners-all .corner-tr {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  width: 14px;
+  height: 14px;
+  border-top: 2px solid var(--muted-brass);
+  border-right: 2px solid var(--muted-brass);
+  border-top-right-radius: var(--radius-sm);
+  pointer-events: none;
+}
+.bracket-corners-all .corner-bl {
+  position: absolute;
+  bottom: -1px;
+  left: -1px;
+  width: 14px;
+  height: 14px;
+  border-bottom: 2px solid var(--muted-brass);
+  border-left: 2px solid var(--muted-brass);
+  border-bottom-left-radius: var(--radius-sm);
+  pointer-events: none;
+}
+
+/* Sacred Vedic Dividers (Surya / Lotus Motif) */
+.vedic-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-6);
+  margin: var(--space-12) 0;
+  opacity: 0.9;
+}
+
+.vedic-divider::before,
+.vedic-divider::after {
+  content: '';
+  flex: 1;
+  max-width: 220px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, var(--muted-brass) 50%, transparent 100%);
+}
+
+.vedic-divider .divider-symbol {
+  color: var(--deep-maroon);
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+/* Form Styles */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-bottom: var(--space-6);
+  text-align: left;
+}
+
+.form-label {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--charcoal-brown);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.form-label .required-badge {
+  color: var(--deep-maroon);
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  font-family: var(--font-sans);
+  font-size: 16px; /* Essential: prevents iOS Safari auto-zoom on input focus */
+  color: var(--charcoal-brown);
+  background: #FFFFFF;
+  border: 1.5px solid rgba(178, 138, 69, 0.4);
+  border-radius: var(--radius-md);
+  transition: border-color var(--duration-fast) ease, box-shadow var(--duration-fast) ease, background var(--duration-fast) ease;
+  min-height: 48px;
+  touch-action: manipulation;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* Android & iOS Date Input Optimization */
+input[type="date"].form-input {
+  display: block;
+  min-height: 48px;
+  background-color: #FFFFFF;
+  color: var(--charcoal-brown);
+  font-size: 16px;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  opacity: 0.75;
+  padding: 4px;
+}
+
+select.form-select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23702D3C' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 16px;
+  padding-right: 2.5rem;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: var(--indigo);
+  box-shadow: 0 0 10px var(--indigo-glow);
+  background: #FFFFFF;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: rgba(53, 44, 40, 0.45);
+}
+
+.form-hint {
+  font-size: var(--text-xs);
+  color: var(--charcoal-dim);
+  margin-top: var(--space-1);
+}
+
+/* Focus Visible Accessibility */
+:focus-visible {
+  outline: 2px solid var(--indigo);
+  outline-offset: 3px;
+}
