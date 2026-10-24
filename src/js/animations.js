@@ -39,7 +39,10 @@ export function initAnimations() {
   // 8. Mobile Navigation Toggle
   initMobileNav();
 
-  // 9. Clean Hero Palm Reading Live Showcase
+  // 9. Mobile Sticky Booking Action Bar
+  initMobileStickyBar();
+
+  // 10. Clean Hero Palm Reading Live Showcase
   initHeroPalmShowcase(isReducedMotion);
 }
 
@@ -372,6 +375,31 @@ function initMobileNav() {
       toggleMenu(false);
     }
   }, { passive: true });
+}
+
+/**
+ * Mobile Sticky Action Bar Visibility Controller
+ * Slides up gracefully on smartphones once user scrolls past hero threshold.
+ */
+function initMobileStickyBar() {
+  const bar = document.getElementById('mobile-sticky-bar');
+  if (!bar) return;
+
+  function updateBar() {
+    if (window.innerWidth <= 768) {
+      if (window.scrollY > 280) {
+        bar.classList.add('visible');
+      } else {
+        bar.classList.remove('visible');
+      }
+    } else {
+      bar.classList.remove('visible');
+    }
+  }
+
+  window.addEventListener('scroll', updateBar, { passive: true });
+  window.addEventListener('resize', updateBar, { passive: true });
+  updateBar();
 }
 
 /**

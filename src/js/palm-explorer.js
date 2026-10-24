@@ -48,6 +48,9 @@ export function initPalmExplorer() {
       btn.innerHTML = lineData ? lineData.name : line.id;
       btn.addEventListener('click', () => {
         setActiveLine(line.id, true);
+        if (window.innerWidth <= 768) {
+          btn.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+        }
       });
       tabsContainer.appendChild(btn);
     });

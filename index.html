@@ -131,15 +131,15 @@
           <li><a href="#how-it-works" class="nav-link" data-i18n="nav.howItWorks">How It Works</a></li>
           <li><a href="#reviews" class="nav-link" data-i18n="nav.reviews">Reviews</a></li>
           <li><a href="#faq" class="nav-link" data-i18n="nav.faq">FAQ</a></li>
-          <li>
-            <div class="lang-switcher" role="group" aria-label="Language selection">
-              <button class="lang-toggle-btn active" data-lang="en" aria-pressed="true">English</button>
-              <button class="lang-toggle-btn" data-lang="hi" aria-pressed="false">हिन्दी</button>
-            </div>
-          </li>
           <li><a href="#booking" class="btn btn-primary btn-shimmer" style="padding: 0.55rem 1.25rem; font-size: 0.9rem;" data-i18n="nav.bookConsultation">Book Consultation</a></li>
         </ul>
-        <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+        <div class="header-right-actions">
+          <div class="lang-switcher" role="group" aria-label="Language selection">
+            <button class="lang-toggle-btn active" data-lang="en" aria-pressed="true">English</button>
+            <button class="lang-toggle-btn" data-lang="hi" aria-pressed="false">हिन्दी</button>
+          </div>
+          <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+        </div>
       </nav>
     </div>
   </header>
@@ -1118,6 +1118,27 @@
       </div>
     </div>
   </footer>
+
+  <!-- Mobile Phone Sticky Quick-Action Bar -->
+  <aside id="mobile-sticky-bar" class="mobile-sticky-bar" aria-label="Quick Consultation Booking">
+    <div class="mobile-sticky-details">
+      <div class="mobile-sticky-badge">
+        <span class="mobile-sticky-dot" aria-hidden="true"></span>
+        <span data-i18n="mobileBar.practitioner">Kuldeep • 5+ Yrs Exp</span>
+      </div>
+      <div class="mobile-sticky-pricing">
+        <span class="mobile-price-val" data-i18n="mobileBar.priceYouth">₹300</span>
+        <span class="mobile-price-sep">/</span>
+        <span class="mobile-price-val" data-i18n="mobileBar.priceStandard">₹500</span>
+      </div>
+    </div>
+    <a href="#booking" class="btn btn-primary btn-shimmer mobile-sticky-btn" id="mobile-sticky-booking-btn">
+      <svg class="mobile-sticky-wa-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+        <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67Z"/>
+      </svg>
+      <span data-i18n="mobileBar.cta">Book on WhatsApp</span>
+    </a>
+  </aside>
 
   <!-- Floating WhatsApp Action Button -->
   <a id="floating-whatsapp-btn" class="floating-whatsapp-btn" href="https://wa.me/919149261672" target="_blank" rel="noopener noreferrer" aria-label="Contact directly on WhatsApp">

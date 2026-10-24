@@ -101,6 +101,7 @@ assert(!!I18N.en.reviews.deleteReview && !!I18N.hi.reviews.deleteReview, "Review
 assert(!!I18N.en.reviews.confirmDelete && !!I18N.hi.reviews.confirmDelete, "Review delete confirmation translated in EN & HI");
 assert(!!I18N.en.reviews.reviewDeletedToast && !!I18N.hi.reviews.reviewDeletedToast, "Review deleted toast translated in EN & HI");
 assert(!!I18N.en.reviews.restoreReviewsBtn && !!I18N.hi.reviews.restoreReviewsBtn, "Restore default reviews translated in EN & HI");
+assert(!!I18N.en.mobileBar && !!I18N.hi.mobileBar, "Mobile sticky bar translated in EN & HI");
 
 // 6. HTML & Assets Check
 console.log("\n6. HTML STRUCTURE & ASSETS CHECK:");
@@ -144,6 +145,8 @@ const requiredIds = [
   'qr-section',
   'booking',
   'footer',
+  'mobile-sticky-bar',
+  'mobile-sticky-booking-btn',
   'floating-whatsapp-btn'
 ];
 

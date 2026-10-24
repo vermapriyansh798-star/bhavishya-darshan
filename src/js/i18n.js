@@ -19,6 +19,13 @@ export const I18N = {
       bookConsultation: "Book Consultation"
     },
 
+    mobileBar: {
+      practitioner: "Kuldeep • 5+ Yrs Exp",
+      cta: "Book on WhatsApp",
+      priceYouth: "₹300",
+      priceStandard: "₹500"
+    },
+
     hero: {
       badge: "Vedic Palmistry Guidance • Kuldeep Dhoundiyal",
       titleStart: "True Guidance Written in the",
@@ -324,6 +331,13 @@ export const I18N = {
       reviews: "समीक्षाएँ",
       faq: "प्रश्नोत्तरी",
       bookConsultation: "परामर्श बुक करें"
+    },
+
+    mobileBar: {
+      practitioner: "कुलदीप • 5+ वर्ष अनुभव",
+      cta: "परामर्श बुक करें",
+      priceYouth: "₹300",
+      priceStandard: "₹500"
     },
 
     hero: {
